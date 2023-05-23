@@ -14,6 +14,7 @@ const Header = () => {
                         <a href="#">interior</a>
                         <a href="#">About Us</a>
                         <a href="#">Contacts</a>
+                        <a href="#">emir</a>
                     </div>
                     <div className=""></div>
                     <div className=""></div>
