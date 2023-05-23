@@ -26,7 +26,7 @@ const Header = () => {
                         zIndex: modal ? "97" : ""
                     }}>
                         <Link onClick={toScroll} to={"/interior"} >interior</Link>
-                        <Link onClick={toScroll1} to={"/about"}>About Us</Link>
+                        <Link onClick={toScroll1} to={"/about"}>About Uu</Link>
                         <Link onClick={toScroll2} to={"/main"}>Menu</Link>
                         <Link onClick={toScroll3} to={"/"}>Contacts</Link>
 
