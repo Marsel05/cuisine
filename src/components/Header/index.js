@@ -1,7 +1,11 @@
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
 const Header = () => {
     const [modal, setModal] = useState(false)
+    const toScroll = () => {
+        window.scroll(0,1500)
+    }
     return (
         <div id="header">
             <div className="container">
@@ -11,9 +15,9 @@ const Header = () => {
                         // display: modal ? "flex" : "none",
                         zIndex: modal ? "97" : ""
                     }}>
-                        <a href="#">interior</a>
-                        <a href="#">About Us</a>
-                        <a href="#">Contacts</a>
+                        <Link onClick={toScroll} to={"/"}>interior</Link>
+                        <Link>About Us</Link>
+                        <Link>Contacts</Link>
                         <a href="#">emir</a>
                     </div>
                     <div className=""></div>

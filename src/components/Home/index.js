@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {ImLocation2} from 'react-icons/im'
 import {BsFillTelephoneFill, BsTelephoneFill} from "react-icons/bs";
-import img from "../img/logo1.png"
-import img2 from "../img/logo2.png"
+import img from "../../img/lineabout.svg"
+import img2 from "../../img/line2.svg"
 import {FaUserEdit} from "react-icons/fa";
 
 
