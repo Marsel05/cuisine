@@ -6,6 +6,10 @@ const Header = () => {
     const toScroll = () => {
         window.scroll(0,1500)
     }
+     const toScroll2 = () => {
+        window.scroll(0,700)
+    }
+
     return (
         <div id="header">
             <div className="container">
@@ -16,9 +20,8 @@ const Header = () => {
                         zIndex: modal ? "97" : ""
                     }}>
                         <Link onClick={toScroll} to={"/"}>interior</Link>
-                        <Link>About Us</Link>
+                        <Link onClick={toScroll2}>About Us</Link>
                         <Link>Contacts</Link>
-                        <a href="#">emir</a>
                     </div>
                     <div className=""></div>
                     <div className=""></div>
