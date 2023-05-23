@@ -2,8 +2,12 @@ import React from 'react';
 
 const Interior = () => {
     return (
-        <div>
-            
+        <div id="interior">
+            <div className="container">
+                <div className="interior">
+                    <h1>Naxi</h1>
+                </div>
+            </div>
         </div>
     );
 };
