@@ -12,6 +12,7 @@
         font-family: "Shalimar", sans-serif;
         font-size: 30px;
         margin: 0 20px;
+        font-weight: 200;
       }
     }
 
@@ -36,17 +37,11 @@
 
     &--list {
       position: relative;
+
       li {
         display: flex;
         align-items: center;
 
-        .liner {
-          width: 354px;
-          height: 1px;
-          background: rgb(93,93,105);
-          background: linear-gradient(90deg, rgba(93,93,105,0) 0%, rgba(255,255,255,1) 50%, rgba(31,39,49,1) 100%);
-
-        }
       }
 
       &__link {
@@ -59,7 +54,21 @@
         background: #1F2731;
         border: none;
         outline: none;
-
+        font-family: "Libre Baskerville", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        position: relative;
+        cursor: pointer;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 70%;
+          height: 1px;
+          background-color: #7e7d7d;
+        }
       }
 
       .line {
@@ -73,19 +82,18 @@
         transform: scaleX(0);
       }
 
-      .tab--list__link.active .line {
+      .activate {
         transform: scaleX(1);
         background: #FFFFFF;
-      }
-
-      button:hover {
-        background: #77797e;
       }
 
       .active {
         background: #de080c;
         transition: .3s ease-in-out;
-
+        padding: 10px 0;
+        &::after{
+          background-color: transparent;
+        }
       }
 
     }
@@ -93,13 +101,19 @@
     .content{
       display: flex;
       flex-direction: column;
+      margin: 0 0 0 20px;
       &__wrapper {
         margin-bottom: 10px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
+        transition: max-height 0.5s ease-in-out;
         &__active {
-          max-height: 600px;
+          max-height: 700px;
+          &__order{
+            h2{
+              color: red;
+            }
+          }
         }
       }
     }
@@ -109,19 +123,20 @@
 
 
     .card {
-      padding: 0 0 40px 0;
+      padding: 0 0 30px 0;
       position: relative;
+      width: 100%;
 
       &--text {
         display: flex;
 
-        p {
-
+        h5 {
+          width: 389px;
           font-weight: 600;
           font-size: 18px;
           color: #FFFFFF;
           opacity: 0.9;
-          margin: 0 -10px 0 10px;
+          margin: 0 10px 0 10px;
         }
 
         h1 {
@@ -138,34 +153,34 @@
           font-weight: 400;
           font-size: 15px;
           color: #EF272C;
-          margin: 0 0 0 -20px;
         }
       }
+       &--order{
+         display: flex;
+         justify-content: space-between;
+         p {
+           font-family: 'Spartan', sans-serif;
+           font-style: normal;
+           font-weight: 400;
+           font-size: 14px;
+           line-height: 20px;
+           color: #d2d2d2;
+           height: 40px;
+           width: 389px;
 
-      p {
-        font-family: 'Spartan', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        color: #d2d2d2;
-        height: 40px;
-        width: 389px;
-      }
+         }
+         h3 {
+           padding: 40px 0 0 0;
+           font-family: 'Libre Baskerville', sans-serif;
+           font-style: normal;
+           font-weight: 300;
+           font-size: 12px;
+           color: #FFFFFF;
+            text-decoration-line: underline;
+         }
+       }
 
-      h3 {
-        font-family: 'Libre Baskerville', sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 12px;
-        color: #FFFFFF;
 
-      }
-      &--chyzyc{
-        background: white;
-        width: 65px;
-        height: 1px;
-      }
     }
   }
   .kep{

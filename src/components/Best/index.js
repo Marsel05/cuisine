@@ -33,25 +33,28 @@ const Best = () => {
                             See what new at your Cafesio and You`ll find Cafesio
                             Covent Carden moments.</p>
                     </div>
-                    <div className="best--slide">
-                        <Slider {...settings}>
-                            <div>
-                                <img src={cok1} alt="img"/>
-                            </div>
-                            <div>
-                                <img src={cok2} alt="img"/>
-                            </div>
-                            <div>
-                                <img src={cok3} alt="img"/>
-                            </div>
-                            <div>
-                                <img src={cok4} alt="img"/>
-                            </div>
-                            <div>
-                                <img src={cok5} alt="img"/>
-                            </div>
-                        </Slider>
 
+                    <div className="best--slide">
+                        <div className="border"></div>
+                        <div className="">
+                            <Slider {...settings}>
+                                <div>
+                                    <img src={cok1} alt="img"/>
+                                </div>
+                                <div>
+                                    <img src={cok2} alt="img"/>
+                                </div>
+                                <div>
+                                    <img src={cok3} alt="img"/>
+                                </div>
+                                <div>
+                                    <img src={cok4} alt="img"/>
+                                </div>
+                                <div>
+                                    <img src={cok5} alt="img"/>
+                                </div>
+                            </Slider>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -5,19 +5,23 @@
     padding: 50px 0;
     margin: 0 auto;
     width: 80%;
-
+    .search{
+      display: none;
+      width: 80%;
+    }
+    .ground{
+      width: 80%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
     &--list {
+
       li {
         display: flex;
         align-items: center;
         position: relative;
-        .liner {
-          width: 354px;
-          height: 1px;
-          background: rgb(93, 93, 105);
-          background: linear-gradient(90deg, rgba(93, 93, 105, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(31, 39, 49, 1) 100%);
-
-        }
       }
 
       &__link {
@@ -29,9 +33,30 @@
         color: white;
         background: #1F2731;
         border: none;
+        cursor: pointer;
         outline: none;
-      }
+        font-family: "Libre Baskerville", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 70%;
+          height: 1px;
+          background-color: #7e7d7d;
+        }
 
+      }
+      .active {
+        background: #de080c;
+        transition: .3s ease-in-out;
+        width: 350px;
+        z-index: 99;
+      }
       .line {
         position: absolute;
         right: -10px;
@@ -41,30 +66,41 @@
         transition: transform 0.3s ease-in-out;
         transform-origin: right center;
         transform: scaleX(0);
+
       }
 
-      .menu--list__link.active .line {
-        transform: scaleX(0);
+      .activate {
+        transform: scaleX(1);
         background: #FFFFFF;
       }
 
-      button:hover {
-        background: #77797e;
-      }
 
-      .active {
-        background: #de080c;
-        transition: .3s ease-in-out;
-        width: 350px;
-      }
+
 
     }
-
+    .desc{
+      display: none;
+    }
     &--content {
       margin: 0 0 0 50px;
       display: flex;
       flex-wrap: wrap;
       gap: 0.7rem;
+
+       .ground{
+         width: 59%;
+         height: 200%;
+         background: rgba(255, 255, 255, 0);
+         position: absolute;
+         left: 40%;
+         top: 0;
+       }
+      .similar{
+        margin: 20px 150px 20px 0 ;
+        color: #fff;
+        font-family: "Libre Baskerville";
+        font-weight: 400;
+      }
       .card {
         background: #FFFFFF;
 
@@ -107,87 +143,97 @@
       }
     }
 
+    .modal{
 
-  }
-  .modal{
-    &__content {
-      width: 640px;
-      height: 238px;
-      background:#1F2731;
-      display: flex;
-      &__column{
+      &--button{
+        font-size: 35px;
+        color: #FFFFFF;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        cursor: pointer;
+
+      }
+      &__content {
+        width: 640px;
+        height: 238px;
+        background:#1F2731;
         display: flex;
-        flex-direction: column;
-
-        &__open{
+        &__column{
           display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0 10px;
-          padding: 2px 0 2px 0;
-          &__name{
-            h1 {
-              font-family: 'Spartan', sans-serif;
+          flex-direction: column;
+
+          &__open{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 10px;
+            padding: 2px 0 2px 0;
+            &__name{
+              h1 {
+                font-family: 'Spartan', sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+                color: #e5e5e5;
+              }
+
+              h4 {
+                font-weight: 500;
+                font-size: 14px;
+                letter-spacing: 0.07em;
+                color: #939393;
+              }
+
+
+            }
+            p{
+              font-family: 'Spartan',sans-serif;
+              font-style: normal;
               font-weight: 600;
               font-size: 16px;
-              color: #e5e5e5;
+              color: #EF272C;
+
             }
-
-            h4 {
-              font-weight: 500;
-              font-size: 14px;
-              letter-spacing: 0.07em;
-              color: #939393;
-            }
-
-
-          }
-          p{
-            font-family: 'Spartan',sans-serif;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            color: #EF272C;
-
           }
         }
-      }
 
-      &__actions{
+        &__actions{
 
-        &__price{
-          padding: 10px 20px;
-          &__cafe{
-            width: 262px;
-            h1{
-              font-family: 'Spartan', sans-serif;
-              font-weight: 600;
-              font-size: 16px;
-              color: #ffffff;
-              padding: 10px 0;
-            }
-            &__cherry{
-              display: flex;
-              justify-content: space-between;
-              p{
-                font-family: 'Spartan';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 14px;
-                color: #939393;
-                padding:  0 0 2px 0;
+          &__price{
+            padding: 10px 20px;
+            &__cafe{
+              width: 262px;
+              h1{
+                font-family: 'Spartan', sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+                color: #ffffff;
+                padding: 10px 0;
               }
-            }
-            &__cola{
-              display: flex;
-              justify-content: space-between;
-              p{
-                font-family: 'Spartan';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 14px;
-                color: #939393;
-                padding:  0 0 2px 0;
+              &__cherry{
+                display: flex;
+                justify-content: space-between;
+                p{
+                  font-family: 'Spartan';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 14px;
+                  color: #939393;
+                  padding:  0 0 2px 0;
+                }
+              }
+              &__cola{
+                display: flex;
+                justify-content: space-between;
+                p{
+                  font-family: 'Spartan';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 14px;
+                  color: #939393;
+                  padding:  0 0 2px 0;
+                }
               }
             }
           }
@@ -195,4 +241,5 @@
       }
     }
   }
+
 }

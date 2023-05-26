@@ -8,6 +8,7 @@ import Interior from "../Interior";
 import Footer from "../Footer";
 
 
+
 const Global = () => {
     return (
         <div>
