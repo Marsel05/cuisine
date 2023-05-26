@@ -1,13 +1,20 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import line2 from "../../img/line2.svg";
 import line from "../../img/lineabout.svg";
 import {NavLink} from "react-router-dom";
 import {BsArrowRight} from "react-icons/bs";
+import Description from "../Description";
+
 const Main = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     const handleTabClick = (index) => {
-        setActiveTab(index);
+
+        if  (windowWidth <= 320){
+            window.location.href = '/description';
+        }else{
+            setActiveTab(index);
+        }
     };
 
     const tabs = [
@@ -18,62 +25,87 @@ const Main = () => {
                     <div className="card">
                         <div className="card--text">
                             <h1>Burger&Pasta</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Burger&Pasta</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Burger&Pasta</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Burger&Pasta</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Burger&Pasta</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Burger&Pasta</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
+
                     </div>
                 </div>
             ),
@@ -85,62 +117,86 @@ const Main = () => {
                     <div className="card">
                         <div className="card--text">
                             <h1>Hot Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Hot Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Hot Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Hot Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Hot Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Hot Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                 </div>
 
@@ -153,62 +209,86 @@ const Main = () => {
                     <div className="card">
                         <div className="card--text">
                             <h1>Cold Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Cold Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Cold Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Cold Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Cold Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Cold Drinks</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                 </div>
             ),
@@ -220,62 +300,86 @@ const Main = () => {
                     <div className="card">
                         <div className="card--text">
                             <h1>National Foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>National Foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>National Foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>National Foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>National Foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>National Foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                 </div>
             ),
@@ -287,62 +391,86 @@ const Main = () => {
                     <div className="card">
                         <div className="card--text">
                             <h1>Eastern cuisine</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Eastern cuisine</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Eastern cuisine</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Eastern cuisine</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Eastern cuisine</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Eastern cuisine</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                 </div>
             ),
@@ -354,68 +482,107 @@ const Main = () => {
                     <div className="card">
                         <div className="card--text">
                             <h1>Fast foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Fast foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Fast foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Fast foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Fast foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                     <div className="card">
                         <div className="card--text">
                             <h1>Fast foods</h1>
-                            <p>.....................................................................................</p>
+                            <h5>.....................................................................................</h5>
                             <h4>$24</h4>
                         </div>
-                        <p>
-                            Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.
-                        </p>
+                        <div className="card--order">
+                            <p>
+                                Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet
+                                pultvätta, om pneumativ.
+                            </p>
+                            <h3 className="card--order__chyzyc">Order Now</h3>
+                        </div>
                     </div>
                 </div>
             ),
         },
 
     ];
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+
     return (
         <div id="main">
             <div className="container">
@@ -437,14 +604,14 @@ const Main = () => {
                                         onClick={() => handleTabClick(index)}
                                     >
                                         {tab.title}
-                                        <div className={`line ${activeTab === index ? 'active' : ''}`} />
+                                        <div className={`line ${activeTab === index ? 'activate' : ''}`}/>
                                     </button>
-                                    <div className="liner"></div>
-                                </center>
 
+                                </center>
                             </li>
                         ))}
-                    </ul> {/*<div className="tab--content">{tabs[activeTab].content}</div>*/}
+                    </ul>
+                    {/*<div className="tab--content">{tabs[activeTab].content}</div>*/}
                     <div className="content">
                         {tabs.map((tab, index) => (
                             <div
@@ -452,6 +619,10 @@ const Main = () => {
                                 className={`content__wrapper ${activeTab === index ? 'content__wrapper__active' : ''}`}
                             >
                                 {tab.content}
+                                <div
+                                    className={`some-div ${windowWidth <= 320 ? 'block' : ''}`}
+                                >
+                                </div>
                             </div>
                         ))}
                     </div>
