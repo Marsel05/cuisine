@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import ice from '../../img/ice1.png';
 import ice2 from '../../img/ice2.png';
@@ -6,6 +6,9 @@ import ice3 from '../../img/ice3.png';
 import ice4 from '../../img/ice4.png';
 import ice5 from '../../img/ice5.png';
 import ice6 from '../../img/ice6.png';
+import line from "../../img/lineabout.svg"
+import {MdSearch} from "react-icons/md";
+import {AiOutlineCloseCircle} from "react-icons/ai";
 
 const Menu = () => {
     const [activeMenu, setActiveMenu] = useState(0);
@@ -51,17 +54,34 @@ const Menu = () => {
     const getDesert = (index) => {
         setDesert(index);
     };
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const handleTabClick = (index) => {
         setActiveMenu(index);
     };
 
     const handleCardClick = (index) => {
-        setSelectedCardIndex(index);
-        setRemovedCard(tabs[index]);
-        setShowModal(true);
-        setSelectedImage(tabs[index].image);
-    };
+        if (windowWidth <= 320) {
+            window.location.href = '/description';
+        } else {
+            setSelectedCardIndex(index);
+            setRemovedCard(tabs[index]);
+            setShowModal(true);
+            setSelectedImage(tabs[index].image);
+        }
+    }
 
     const handleCancel = () => {
         setTabs((prevTabs) => {
@@ -72,10 +92,18 @@ const Menu = () => {
         setShowModal(false);
         setSelectedCardIndex(null);
     };
-
     return (
         <div id="menu">
             <div className="menu">
+                <div className="search">
+                    <div className="search--full">
+                        <div className="search--full__title">
+                            <img src={line} alt="img"/>
+                            <h1>Menu</h1>
+                        </div>
+                        <button><MdSearch/></button>
+                    </div>
+                </div>
                 <ul className="menu--list">
                     {tabs.map((tab, index) => (
                         <li key={index}>
@@ -85,9 +113,9 @@ const Menu = () => {
                                         className={`menu--list__link ${activeMenu === index ? 'active' : ''}`}
                                         onClick={() => handleTabClick(index)}
                                     >
-                                        {tab.title}  <div className={`line ${activeMenu === index ? 'active' : ''}`} />
+                                        {tab.title}
+                                        <div className={`line ${activeMenu === index ? 'activate' : ''}`}/>
                                     </button>
-                                    <div className="liner"></div>
                                 </center>
                             </NavLink>
                         </li>
@@ -96,9 +124,9 @@ const Menu = () => {
                 <div className="menu--content">
                     {showModal && (
                         <div className="modal">
-                            <button className="modal--button cancel-button" onClick={handleCancel}>
-                                X
-                            </button>
+                            <div className="modal--button cancel-button" onClick={handleCancel}>
+                                <AiOutlineCloseCircle/>
+                            </div>
                             <div className="modal__content">
                                 <div className="modal__content__column">
                                     {selectedImage && <img src={selectedImage} alt="Selected Image"/>}
@@ -131,7 +159,6 @@ const Menu = () => {
                                                             <p>{tab.cherry}</p>
                                                             <p>{tab.coin}</p>
                                                         </div>
-
                                                     </div>
                                                     <div className="modal__content__actions__price__cafe">
                                                         <h1>{tab.h2}</h1>
@@ -153,19 +180,31 @@ const Menu = () => {
                             </div>
                         </div>
                     )}
+                    <div style={{
+                        display: showModal === true ? "block" : "none"
+                    }} className={showModal === true ? "ground" : ''}></div>
+                    <h1 className="similar" style={{
+                        display: showModal === true ? "block" : "none"
+                    }}>Similar gueries</h1>
                     {tabs.map((tab, index) => (
                         <div key={index}>
+
                             {selectedCardIndex === index && showModal ? null : (
                                 <div className="card">
+                                    <div
+                                        className={`some-div ${windowWidth <= 320 ? 'block' : ''}`}
+                                    >
+                                        {/* content */}
+                                    </div>
                                     <button
                                         className={`card--click ${desert === index ? 'desert' : ''}`}
                                         onClick={() => getDesert(index)}
                                     >
                                         <img onClick={() => handleCardClick(index)} src={tab.image}
-                                             alt=""/> {desert === index && <div className="cream"></div>}
+                                             alt=""/>
                                     </button>
                                     {
-                                        tabs.map((tab) => (
+                                        tabs.slice(0, 1).map((tab) => (
                                             <div className="card--text">
                                                 <div className="card--text__ice">
                                                     <h1>{tab.name}</h1>
